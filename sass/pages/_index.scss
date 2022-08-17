@@ -9,8 +9,8 @@ main {
 #home {
     height: 100vh;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
     .home__text {
         width: 60%;
     }
@@ -79,6 +79,74 @@ main {
         }
         img {
             border-radius: 50%;
+        }
+    }
+}
+
+#about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    .title {
+        display: flex;
+        flex-direction: row;
+        h1 {
+            margin: 0 10px 0 0;
+        }
+    }
+    .about__description {
+        display: flex;
+        flex-direction: row;
+        .aboutme-image {
+            min-width: 300px;
+            width: 30%;
+            height: 200px;
+            overflow: hidden;
+            @include appearing-animation(fade-in, 0s);
+            img {
+                min-width: 300px;
+                width: 30%;
+                height: 200px;
+                object-fit: fill;
+            }
+        }
+        .aboutme-text {
+            width: 60%;
+            margin-left: 20px;
+            @include appearing-animation(appearing-right-left,150ms);
+            p {
+                line-height: 25px;
+            }
+        }
+    }
+    .about__points {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        button {
+            position: relative;
+            left: 30%;
+            @include appearing-animation(appearing-right-left, 1s);
+            opacity: 0;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            @include appearing-animation(appearing-bottom-up, 500ms);
+            li {
+                display: flex;
+                .coloured {
+                    font-weight: 900;
+                }
+                .my_contacts {
+                    margin-left: 20px;
+                }
+            }
         }
     }
 }

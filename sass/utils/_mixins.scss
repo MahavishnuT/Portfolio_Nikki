@@ -1,0 +1,36 @@
+@mixin appearing-animation($name, $delay) {
+    animation: $name 2000ms cubic-bezier(.25,.85,.27,.99) $delay forwards;
+}
+
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appearing-bottom-up {
+    0% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes appearing-right-left {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
