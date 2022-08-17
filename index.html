@@ -4,41 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/prefixed/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <title>Nichola Lumsden</title>
 </head>
 <body>
     <header>
+        <div class="title">
+            <h1 class="coloured">NICHOLA</h1><h1>LUMSDEN</h1>
+        </div>
         <nav>
-            <div class="title">
-                <h1 class="coloured">NICHOLA</h1><h1>LUMSDEN</h1>
-            </div>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Experience</li>
-                <li>Contact</li>
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Skills</li></a>
+                <a href="#"><li>Experience</li></a>
+                <a href="#"><li>Contact</li></a>
             </ul>
-            <span><i class="fa-brands fa-linkedin"></i></span>
         </nav>
+        <a class="socials" href="https://fr.linkedin.com/in/nichola-lumsden-401798115?original_referer=" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
     </header>
 
     <main>
 
-        <section class="home">
-            <h3>Hi there...</h3><br>
-            <div class="title">
-                <h1>I AM</h1><h1 class="coloured">NICHOLA LUMSDEN</h1>
+        <section id="home">
+            <div class="home__text">
+                <h3>Hi there...</h3>
+                <div class="title">
+                    <h1>I AM</h1><h1 class="coloured">NICHOLA LUMSDEN</h1>
+                </div>
+                <h2>i am a belle gosse from ireland</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corrupti excepturi numquam dolorum modi, ad cum ex nobis, laudantium itaque nam expedita facere quis labore ea eos commodi eum iste!</p>
+                <button href="#">About Me</button>
             </div>
-            <h2>I Am A ...</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corrupti excepturi numquam dolorum modi, ad cum ex nobis, laudantium itaque nam expedita facere quis labore ea eos commodi eum iste!</p>
-            <button href="#">About Me</button>
-            <div class="home-image"><img src="" alt="A photo of me"></div>
+            <div class="home__image">
+                <img src="./img/nikki.jpg" alt="A photo of me">
+                <div class="dot"></div>
+            </div>
+            
         </section>
 
-        <section class="about">
+        <section id="about">
             <div class="title">
                 <h1>ABOUT</h1><h1 class="coloured">ME</h1>
             </div>
@@ -57,7 +63,7 @@
             <button>Download CV</button>
         </section>
 
-        <section class="skills">
+        <section id="skills">
             <div class="title"><h1 class="coloured">MY</h1><h1>SKILLS</h1></div>
             <div class="lines">
                 <div class="line">
@@ -97,7 +103,7 @@
             </div>
         </section>
 
-        <section class="experience">
+        <section id="experience">
             <div class="title"><h1 class="coloured">MY</h1><h1>EXPERIENCE</h1></div>
 
             <div class="tree">
@@ -113,7 +119,7 @@
             <div class="card"><img src="" alt="Photo of year 2019"><h2>Lorem</h2><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, repudiandae?</span></div>
         </section>
 
-        <section class="contact">
+        <section id="contact">
             <div class="title"><h1>CONTACT</h1><h1 class="coloured">ME</h1></div>
             
             <form action="https://formsubmit.co/tom.pujalte@hotmail.fr" method="POST">
