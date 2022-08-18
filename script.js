@@ -11,7 +11,7 @@ window.addEventListener("scroll", () => {
     
         const topElementToTopViewport = reveal[i].getBoundingClientRect().top;
     
-        if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.90) {
+        if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 1.2) {
             reveal[i].classList.add("active")
         }
     }

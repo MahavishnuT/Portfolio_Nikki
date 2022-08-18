@@ -1,0 +1,18 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    max-width: 230px;
+    min-width: 200px;
+    height: 120px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom right, $colour-secondary, $colour-fortiary );
+    &__number {
+        margin-left: 10px;
+        font-weight: 900;
+        color: $dark-background-color;
+    }
+    &__excerpt {
+        margin-left: 10px;
+    }
+}

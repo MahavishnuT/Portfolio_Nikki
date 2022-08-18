@@ -1,7 +1,7 @@
 main {
     position: absolute;
     right: 0;
-    max-width: 67%;
+    max-width: 75%;
     display: flex;
     flex-direction: column;
 }
@@ -165,18 +165,58 @@ main {
             margin: 0 10px 0 0;
         }
     }
-    .cards {
+    .lines_cards {
         display: flex;
-        flex-flow: column wrap;
-        max-height: 350px;
-        max-width: 400px;
-        justify-content: space-evenly;
-        .card {
+        flex-direction: row;
+        justify-content: space-around;
+        .lines {
             display: flex;
             flex-direction: column;
-            border: 1px solid black;
-            max-width: 150px;
-            height: 120px;
+            gap: 20px;
+            width: 50%;
+            .line {
+                .coloured {
+                    font-weight: 700;
+                }
+                .bar {
+                    position: relative;
+                    max-width: 350px;
+                    height: 9px;
+                    background-color: $bar-background;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    margin-top: 5px;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: 9px;
+                        display: flex;
+                        background-color: $colour-secondary;
+                    }
+                }
+                &:nth-child(1) .bar::before {
+                    width: 80%;
+                }
+                &:nth-child(2) .bar::before {
+                    width: 95%;
+                }
+                &:nth-child(3) .bar::before {
+                    width: 65%;
+                }
+                &:nth-child(4) .bar::before {
+                    width: 75%;
+                }
+            }
+        }
+        .cards {
+            display: flex;
+            flex-flow: row wrap;
+            max-height: 350px;
+            max-width: 500px;
+            justify-content: space-evenly;
+            width: 50%;
+            gap: 15px;
+            margin-right: 5px;
         }
     }
 }

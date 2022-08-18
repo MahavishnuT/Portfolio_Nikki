@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400&family=Roboto:ital,wght@0,100;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400&family=Roboto:ital,wght@0,100;1,400;0,600&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -417,6 +417,25 @@ button:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  max-width: 230px;
+  min-width: 200px;
+  height: 120px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom right, #6BBD99, #C4E8C2);
+}
+.card__number {
+  margin-left: 10px;
+  font-weight: 900;
+  color: white;
+}
+.card__excerpt {
+  margin-left: 10px;
+}
+
 header {
   position: fixed;
   display: flex;
@@ -428,7 +447,7 @@ header {
   background-color: #181818;
   align-items: center;
   z-index: 100;
-  width: 30%;
+  width: 20%;
   max-width: 340px;
 }
 header .socials {
@@ -488,7 +507,7 @@ header ul a li:hover {
 main {
   position: absolute;
   right: 0;
-  max-width: 67%;
+  max-width: 75%;
   display: flex;
   flex-direction: column;
 }
@@ -653,19 +672,57 @@ main {
 #skills .title h1 {
   margin: 0 10px 0 0;
 }
-#skills .cards {
+#skills .lines_cards {
   display: flex;
-  flex-flow: column wrap;
-  max-height: 350px;
-  max-width: 400px;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-around;
 }
-#skills .cards .card {
+#skills .lines_cards .lines {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  max-width: 150px;
-  height: 120px;
+  gap: 20px;
+  width: 50%;
+}
+#skills .lines_cards .lines .line .coloured {
+  font-weight: 700;
+}
+#skills .lines_cards .lines .line .bar {
+  position: relative;
+  max-width: 350px;
+  height: 9px;
+  background-color: #d3D3D3;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+#skills .lines_cards .lines .line .bar::before {
+  content: "";
+  position: absolute;
+  height: 9px;
+  display: flex;
+  background-color: #6BBD99;
+}
+#skills .lines_cards .lines .line:nth-child(1) .bar::before {
+  width: 80%;
+}
+#skills .lines_cards .lines .line:nth-child(2) .bar::before {
+  width: 95%;
+}
+#skills .lines_cards .lines .line:nth-child(3) .bar::before {
+  width: 65%;
+}
+#skills .lines_cards .lines .line:nth-child(4) .bar::before {
+  width: 75%;
+}
+#skills .lines_cards .cards {
+  display: flex;
+  flex-flow: row wrap;
+  max-height: 350px;
+  max-width: 500px;
+  justify-content: space-evenly;
+  width: 50%;
+  gap: 15px;
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
