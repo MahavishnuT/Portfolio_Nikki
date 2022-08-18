@@ -104,7 +104,6 @@ main {
             width: 30%;
             height: 200px;
             overflow: hidden;
-            @include appearing-animation(fade-in, 0s);
             img {
                 min-width: 300px;
                 width: 30%;
@@ -115,9 +114,12 @@ main {
         .aboutme-text {
             width: 60%;
             margin-left: 20px;
-            @include appearing-animation(appearing-right-left,150ms);
+            transform: translateX(500px);
             p {
                 line-height: 25px;
+            }
+            h2 {
+                margin-top: 0;
             }
         }
     }
@@ -127,9 +129,8 @@ main {
         align-items: center;
         button {
             position: relative;
-            left: 30%;
-            @include appearing-animation(appearing-right-left, 1s);
-            opacity: 0;
+            left: 20%;
+            transform: translateX(500px);
         }
         ul {
             list-style: none;
@@ -137,7 +138,7 @@ main {
             flex-direction: column;
             gap: 10px;
             padding: 10px;
-            @include appearing-animation(appearing-bottom-up, 500ms);
+            transform: translateY(300px);
             li {
                 display: flex;
                 .coloured {
@@ -147,6 +148,35 @@ main {
                     margin-left: 20px;
                 }
             }
+        }
+    }
+}
+
+#skills {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    .title {
+        display: flex;
+        flex-direction: row;
+        h1 {
+            margin: 0 10px 0 0;
+        }
+    }
+    .cards {
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 350px;
+        max-width: 400px;
+        justify-content: space-evenly;
+        .card {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            max-width: 150px;
+            height: 120px;
         }
     }
 }
