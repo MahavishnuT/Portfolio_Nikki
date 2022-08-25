@@ -7,6 +7,13 @@
     height: 120px;
     border-radius: 5px;
     background: linear-gradient(to bottom right, $colour-secondary, $colour-fortiary );
+    transform: translateY(150px);
+    @include box-shadow;
+    transition: box-shadow 200ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+        @include box-shadow-hover;
+    }
     &__number {
         margin-left: 10px;
         font-weight: 900;
@@ -16,3 +23,16 @@
         margin-left: 10px;
     }
 }
+
+/* .card1 {
+    animation-delay: 0s;
+}
+.card2 {
+    animation-delay: 100ms;
+}
+.card1 {
+    animation-delay: 200ms;
+}
+.card1 {
+    animation-delay: 300ms;
+} */

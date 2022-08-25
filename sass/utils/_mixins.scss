@@ -18,9 +18,15 @@
     @include appearing-animation(appearing-right-left, 150ms);
 }
 
+.active.left-right {
+    @include appearing-animation(appearing-left-right, 100ms);
+}
+
 button.active.right-left {
     @include appearing-animation(appearing-right-left, 700ms);
 }
+
+
 
 @keyframes fade-in {
     to {
@@ -40,4 +46,22 @@ button.active.right-left {
         transform: translateX(0px);
         opacity: 1;
     }
+}
+
+@keyframes appearing-left-right {
+    from {
+        opacity: 1;
+    }
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@mixin box-shadow {
+     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+@mixin box-shadow-hover { 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
