@@ -130,17 +130,26 @@
             
             <form action="https://formsubmit.co/tom.pujalte@hotmail.fr" method="POST">
                 <div class="form__group">
-                    <input type="text" name="first name" placeholder="First Name" required>
-                    <span class="alert-msg">Enter a valid name</span>
-                    <br>
-                    <input type="text" name="last name" placeholder="Last Name" required>
-                    <span class="alert-msg">Enter a valid name</span>
-                    <br>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <span class="alert-msg">Enter a valid email</span>
-                    <br>
-                    <input type="text" name="message" placeholder="Your Message" rows="10" required>
-                    <br>
+                    <div class="input-box">
+
+                        <input type="text" name="first name" required>
+                        <span class="placeholder">First name</span>
+                        <span class="alert-msg">Enter a valid name</span>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="last name" required>
+                        <span class="placeholder">Last name</span>
+                        <span class="alert-msg">Enter a valid name</span>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="email" required>
+                        <span class="placeholder">Email</span>
+                        <span class="alert-msg">Enter a valid email</span>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="message" name="message" rows="10" maxlength="200" required>
+                        <span class="placeholder">Your message</span>
+                    </div>
                     <button type="submit">Send</button>
                 </div>
             </form>

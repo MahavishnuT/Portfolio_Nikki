@@ -246,6 +246,7 @@ main {
         position: absolute;
         top: 0;
         left: 50%;
+        min-width: 200px;
         &__line {
             position: absolute;
             width: 10px;
@@ -290,5 +291,89 @@ main {
             }
         }
     }
+}
 
+#contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    .title {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 2%;
+        h1 {
+            margin: 0 10px 0 0;
+        }
+    }
+    form {
+        display: flex;
+        min-width: 500px;
+        .form__group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .input-box {
+                position: relative;
+                width: 300px;
+                input:valid, input:focus {
+                    border: 2px solid $colour-primary;
+                }
+                input {
+                    padding: 10px;
+                    margin: 10px 0;
+                    border: 2px solid rgba(0,0,0,0.25);
+                    border-radius: 5px;
+                    outline: none;
+                    font-size: 1em;
+                    width: 300px;
+                    transition: all 200ms;
+                    &:valid ~ .placeholder {
+                        color: $colour-primary;
+                        transform: translateX(10px) translateY(-7px);
+                        font-size: 0.65em;
+                        padding: 0 10px;
+                        background: white;
+                        border-left: 2px solid $colour-primary;
+                        border-right: 2px solid $colour-primary;
+                        letter-spacing: 0.2em;
+                    }
+                    &:focus ~ .placeholder {
+                        color: $colour-primary;
+                        transform: translateX(10px) translateY(-4px);
+                        font-size: 0.65em;
+                        padding: 0 10px;
+                        background: white;
+                        border-left: 2px solid $colour-primary;
+                        border-right: 2px solid $colour-primary;
+                        letter-spacing: 0.2em;
+                    }
+                }
+                .placeholder {
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    padding:  10px;
+                    pointer-events: none;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    color: rgba(0,0,0,0.25);
+                    transition: all 200ms;
+                }
+                .message {
+                    height: 100px;
+                }
+                .alert-msg {
+                    color: red;
+                    font-weight: 500;
+                    font-size: 13px;
+                    display: none;
+                }
+            }
+        }
+    }
 }

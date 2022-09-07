@@ -1,3 +1,5 @@
+// General cards
+
 .card {
     display: flex;
     flex-direction: column;
@@ -24,18 +26,20 @@
     }
 }
 
+// Tree cards
+
 .card__tree {
     position: absolute;
     height: 140px;
     width: 200px;
-    background: linear-gradient(to bottom right, $colour-secondary, $colour-fortiary );
+    background: linear-gradient(to bottom right, $colour-secondary, $colour-fortiary);
     border-radius: 8px;
     @include box-shadow;
     color: $dark-background-color;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    // opacity: 0;
+    opacity: 0;
     h2 {
         padding-left: 10px;
     }
@@ -49,25 +53,52 @@
         height: 100%;
         transform-origin: center;
         border-radius: 8px;
+        @include image-translate;
     }
 }
 .card__tree1 {
     top: 3%;
-    left: 65%;
+    left: 200px;
+    @include bubble-transition;
 }
 .card__tree2 {
     top: 28%;
-    right: 65%;
+    right: 200px;
+    @include bubble-transition;
 }
 .card__tree3 {
     top: 53%;
-    left: 65%;
+    left: 200px;
+    @include bubble-transition;
 }
 .card__tree4 {
     top: 78%;
-    right: 65%;
+    right: 200px;
+    @include bubble-transition;
 }
 
-.tree.tree__bubbles:hover  .card__tree {
+.bubble1:hover ~ .card__tree1 {
     opacity: 1;
+}
+.bubble2:hover ~ .card__tree2 {
+    opacity: 1;
+}
+.bubble3:hover ~ .card__tree3 {
+    opacity: 1;
+}
+.bubble4:hover ~ .card__tree4 {
+    opacity: 1;
+}
+
+.bubble1:hover ~ .card__tree1 > img {
+    transform: translateY(-140px);
+}
+.bubble2:hover ~ .card__tree2 > img {
+    transform: translateY(-140px);
+}
+.bubble3:hover ~ .card__tree3 > img {
+    transform: translateY(-140px);
+}
+.bubble4:hover ~ .card__tree4 > img {
+    transform: translateY(-140px);
 }

@@ -467,6 +467,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  opacity: 0;
 }
 .card__tree h2 {
   padding-left: 10px;
@@ -481,30 +482,63 @@ button:hover {
   height: 100%;
   transform-origin: center;
   border-radius: 8px;
+  transition: transform 400ms ease-in-out 600ms;
 }
 
 .card__tree1 {
   top: 3%;
-  left: 65%;
+  left: 200px;
+  transition: opacity 300ms ease-out;
 }
 
 .card__tree2 {
   top: 28%;
-  right: 65%;
+  right: 200px;
+  transition: opacity 300ms ease-out;
 }
 
 .card__tree3 {
   top: 53%;
-  left: 65%;
+  left: 200px;
+  transition: opacity 300ms ease-out;
 }
 
 .card__tree4 {
   top: 78%;
-  right: 65%;
+  right: 200px;
+  transition: opacity 300ms ease-out;
 }
 
-.tree.tree__bubbles:hover .card__tree {
+.bubble1:hover ~ .card__tree1 {
   opacity: 1;
+}
+
+.bubble2:hover ~ .card__tree2 {
+  opacity: 1;
+}
+
+.bubble3:hover ~ .card__tree3 {
+  opacity: 1;
+}
+
+.bubble4:hover ~ .card__tree4 {
+  opacity: 1;
+}
+
+.bubble1:hover ~ .card__tree1 > img {
+  transform: translateY(-140px);
+}
+
+.bubble2:hover ~ .card__tree2 > img {
+  transform: translateY(-140px);
+}
+
+.bubble3:hover ~ .card__tree3 > img {
+  transform: translateY(-140px);
+}
+
+.bubble4:hover ~ .card__tree4 > img {
+  transform: translateY(-140px);
 }
 
 header {
@@ -822,6 +856,7 @@ main {
   position: absolute;
   top: 0;
   left: 50%;
+  min-width: 200px;
 }
 #experience .tree__line {
   position: absolute;
@@ -865,6 +900,91 @@ main {
   color: white;
   font-size: 20px;
   font-weight: 900;
+}
+
+#contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+#contact .title {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 2%;
+}
+#contact .title h1 {
+  margin: 0 10px 0 0;
+}
+#contact form {
+  display: flex;
+  min-width: 500px;
+}
+#contact form .form__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#contact form .form__group .input-box {
+  position: relative;
+  width: 300px;
+}
+#contact form .form__group .input-box input:valid, #contact form .form__group .input-box input:focus {
+  border: 2px solid #46a094;
+}
+#contact form .form__group .input-box input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  outline: none;
+  font-size: 1em;
+  width: 300px;
+  transition: all 200ms;
+}
+#contact form .form__group .input-box input:valid ~ .placeholder {
+  color: #46a094;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: white;
+  border-left: 2px solid #46a094;
+  border-right: 2px solid #46a094;
+  letter-spacing: 0.2em;
+}
+#contact form .form__group .input-box input:focus ~ .placeholder {
+  color: #46a094;
+  transform: translateX(10px) translateY(-4px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: white;
+  border-left: 2px solid #46a094;
+  border-right: 2px solid #46a094;
+  letter-spacing: 0.2em;
+}
+#contact form .form__group .input-box .placeholder {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.25);
+  transition: all 200ms;
+}
+#contact form .form__group .input-box .message {
+  height: 100px;
+}
+#contact form .form__group .input-box .alert-msg {
+  color: red;
+  font-weight: 500;
+  font-size: 13px;
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
